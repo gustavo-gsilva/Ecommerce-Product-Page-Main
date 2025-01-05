@@ -3,7 +3,6 @@
 Olá a todos! Hoje venho apresentar um novo projeto: Ecommerce Product Page Main. Este projeto simula uma página de compra de um produto e foi desenvolvido como parte do desafio Frontend Mentor no nível intermediário.
 
 [<img src="./gif-projeto-ecommerce-product.gif">]()
-
 [<img src="./gif-projeto-ecommerce-product-responsivo.gif">]()
 
 ## O que temos nesse Projeto
