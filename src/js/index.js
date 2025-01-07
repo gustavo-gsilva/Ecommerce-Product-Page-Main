@@ -1,3 +1,7 @@
+// ================================================
+// VARIÁVEIS DE IMAGENS
+// ================================================
+
 const images = [
     "./src/images/image-product-1.jpg",
     "./src/images/image-product-2.jpg",
@@ -6,6 +10,10 @@ const images = [
 ];
 
 let currentIndex = 0;
+
+// ================================================
+// FUNÇÕES DE CARROSEL DE IMAGENS
+// ================================================
 
 function updateThumbnails() {
     const thumbnails = document.querySelectorAll('.thumbnail-images');
@@ -46,7 +54,9 @@ function changeImage(direction) {
     updateThumbnails();
 };
 
-// FIM DA EXIBIÇÃO E CARROSEL DE IMAGENS //
+// ================================================
+// VARIÁVEIS E FUNÇÕES DO SELETOR DE QUANTIDADE
+// ================================================
 
 const btnLess = document.getElementById('btn-less');
 const btnMore = document.getElementById('btn-more');
@@ -71,17 +81,18 @@ btnMore.addEventListener('click', () => {
     updateCounter();
 });
 
-// FIM SELETOR DE QUANTIDADES //
+// ================================================
+// VARIÁVEIS E FUNÇÕES DO CARRINHO DE COMPRAS
+// ================================================
 
 const cart = document.getElementById('cart');
 const emptyCart = document.querySelector('.empty-cart');
 
+let cartQuantity = 0;
+let howManyProducts = 0;
+
 function displayEmptyCart() {
-    if (emptyCart.style.display === 'block') {
-        emptyCart.style.display = 'none';
-    } else {
-        emptyCart.style.display = 'block';
-    }
+    emptyCart.style.display = (emptyCart.style.display === 'block') ? 'none' : 'block';
 };
 
 cart.addEventListener('click', () => {
@@ -92,12 +103,12 @@ cart.addEventListener('click', () => {
     }
 });
 
-// FIM DA EXIBIÇÃO DO CARRINHO VAZIO //
+// ================================================
+// FUNÇÕES DE ADICIONAR PRODUTOS AO CARRINHO
+// ================================================
 
 const btnAddToCart = document.querySelector('.btn-add-to-cart');
 const productCounterInCart = document.querySelector('.number-of-products-in-the-cart');
-
-let cartQuantity = 0;
 
 function updateQuantity() {
     cartQuantity += counterValue;
@@ -114,12 +125,15 @@ btnAddToCart.addEventListener('click', () => {
     calculateProductPrice();
 });
 
-// FIM DO ADICIONAR PRODUTO //
+// ================================================
+// FUNÇÕES DE EXIBIÇÃO DE CARRINHO
+// ================================================
 
 const cartWithProducts = document.querySelector('.cart-with-item');
 const quantityOfProducts = document.querySelector('.amount');
+const totalValue = document.querySelector('.total-value');
 
-let howManyProducts = 0;
+let unitPrice = 125;
 
 function addProductsToCart() {
     if (cartQuantity > 0) {
@@ -129,18 +143,8 @@ function addProductsToCart() {
 };
 
 function displayProductCart() {
-    if (cartWithProducts.style.display === 'block') {
-        cartWithProducts.style.display = 'none';
-    } else {
-        cartWithProducts.style.display = 'block';
-    }
+    cartWithProducts.style.display = (cartWithProducts.style.display === 'block') ? 'none' : 'block';
 };
-
-// FIM DA EXIBIÇÃO DO CARRINHO COM PRODUTO //
-
-const totalValue = document.querySelector('.total-value');
-
-let unitPrice = 125;
 
 function calculateProductPrice() {
     if (cartQuantity > 0) {
@@ -149,7 +153,9 @@ function calculateProductPrice() {
     }
 };
 
-// FIM DA MUDANÇA DE PREÇO CONFORME A QUANTIDADE //
+// ================================================
+// FUNÇÕES DE LIMPAR O CARRINHO
+// ================================================
 
 const bin = document.querySelector('.bin');
 
@@ -169,27 +175,43 @@ bin.addEventListener('click', () => {
     cleanCart();
 });
 
-// FIM DA FUNCIONALIDADE DE LIMPAR O CARRINHO //
+// ================================================
+// FUNÇÕES DO MENU HAMBURGUER (RESPONSIVO)
+// ================================================
 
 const navList = document.querySelector('.navigation-items');
 const burguerMenuIcon = document.getElementById('burguer');
+const closeMenuIcon = document.querySelector('.close-menu-icon');
+const darkOverlay = document.getElementById('dark-overlay');
 
 function burguerMenu() {
     navList.style.display = 'block';
+    darkOverlay.style.display = 'block';
 };
 
 burguerMenuIcon.addEventListener('click', () => {
     burguerMenu();
+    blockScroll();
 });
-
-// FIM DA FUNCIONALIDADE DE MOSTRAR MENU NO RESPONSIVO //
-
-const closeMenuIcon = document.querySelector('.close-menu-icon');
 
 function hideBurguerMenu() {
     navList.style.display = 'none';
+    darkOverlay.style.display = 'none';
 };
 
 closeMenuIcon.addEventListener('click', () => {
     hideBurguerMenu();
+    unlockScroll();
 });
+
+function blockScroll() {
+    document.body.style.overflow = 'hidden';
+};
+
+function unlockScroll() {
+    document.body.style.overflow = '';
+};
+
+// ================================================
+// FIM DO CÓDIGO
+// ================================================

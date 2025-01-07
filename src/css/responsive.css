@@ -137,7 +137,7 @@
         background-color: var(--white);
         right: 50%;
         top: 0;
-        z-index: 1;
+        z-index: 10;
     }
 
     .header nav ul {
@@ -269,6 +269,12 @@
         align-items: start;
     }
 
+    .header nav .navigation-items {
+        height: 100vh;
+        right: 50%;
+        top: 0;
+    }
+
     .header {
         margin: 20px 0 20px 60px;
     }
@@ -283,7 +289,7 @@
 
     .product {
         flex-direction: column;
-        margin-top: 80%;
+        margin-top: 100%;
     }
 
     .product .product-image img {
@@ -346,13 +352,13 @@
     .empty-cart .empty-cart-container {
         left: 60%;
         top: 0;
-        margin-top: 90px;
+        margin-top: 100px;
     }
 
     .cart-with-item .cart-with-item-container {
         left: 58%;
         top: 0;
-        margin-top: 90px;
+        margin-top: 100px;
     }
 
     .hidden-images {
@@ -445,7 +451,11 @@
 @media (max-width: 630px) {
 
     .header {
-        margin: 30px 0 20px 40px;
+        margin: 25px 0 20px 40px;
+    }
+
+    .hidden-images {
+        top: 46%;
     }
 
     .hidden-images .product-image img {
@@ -461,6 +471,10 @@
         margin-top: 54px;
     }
 
+    .product {
+        margin-top: 80%;
+    }
+
     .product .product-information .add-product {
         width: 90%;
     }
@@ -469,12 +483,21 @@
         margin-left: 198px;
     }
 
+    .empty-cart .empty-cart-container {
+        margin-top: 110px;
+    }
+
+    .cart-with-item .cart-with-item-container {
+        margin-top: 110px;
+    }
+
 }
 
 @media (max-width: 570px) {
 
     .hidden-images {
         left: 41%;
+        z-index: 0;
     }
 
     .hidden-images .product-image img {
@@ -498,11 +521,19 @@
 @media (max-width: 530px) {
 
     .header {
-        margin: 60px 0 0 20px;
+        margin: 25px 0 0 20px;
     }
 
     .header .logo-and-nav-itens {
         margin-right: 70px;
+    }
+
+    .product {
+        margin-top: 75%;
+    }
+
+    .hidden-images {
+        top: 41%;
     }
 
     .hidden-images .product-image img {
@@ -535,8 +566,16 @@
 
 @media (max-width: 481px) {
 
-    .product .product-information {
-        margin-top: 120px;
+    .header {
+        margin: 30px 0 0 20px;
+    }
+
+    .hidden-images {
+        top: 40%;
+    }
+
+    .product {
+        margin-top: 100%;
     }
 
     .empty-cart .empty-cart-container {
@@ -608,8 +647,12 @@
         width: 30px;
     }
 
+    .hidden-images {
+        top: 42%;
+    }
+
     .product .product-information {
-        margin-top: 160px;
+        margin-top: 50px;
     }
 
     .product .product-information .product-quantity .minus-icon {
@@ -632,7 +675,7 @@
         left: 110px;
     }
 
-} 
+}
 
 @media (max-width: 375px) {
 
