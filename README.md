@@ -21,4 +21,3 @@ Esse projeto me deu bastante trabalho mas obtive um aprendizado bem valioso com 
 - HTML
 - CSS
 - JavaScript
-- Biblioteca de Animações CSS
