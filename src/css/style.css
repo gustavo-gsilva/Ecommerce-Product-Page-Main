@@ -13,17 +13,6 @@ body {
     overflow-x: hidden;
 }
 
-#dark-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9;
-    display: none;
-}
-
 .header {
     margin-bottom: 70px;
 }
@@ -37,17 +26,6 @@ body {
     align-items: center;
     margin-right: 200px;
     gap: 25px;
-}
-
-i#burguer {
-    display: none;
-    color: var(--dark-gray-blue);
-    font-size: 2.5rem;
-    cursor: pointer;
-}
-
-.header nav .navigation-items .responsive-menu-close-icon {
-    display: none;
 }
 
 .header nav ul {
@@ -92,6 +70,7 @@ i#burguer {
     position: relative;
     bottom: 11px;
     right: 32px;
+    z-index: 3;
 }
 
 .header .cart-icon-and-profile-avatar .image-avatar img {

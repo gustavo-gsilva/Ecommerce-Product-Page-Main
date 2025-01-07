@@ -176,42 +176,5 @@ bin.addEventListener('click', () => {
 });
 
 // ================================================
-// FUNÇÕES DO MENU HAMBURGUER (RESPONSIVO)
-// ================================================
-
-const navList = document.querySelector('.navigation-items');
-const burguerMenuIcon = document.getElementById('burguer');
-const closeMenuIcon = document.querySelector('.close-menu-icon');
-const darkOverlay = document.getElementById('dark-overlay');
-
-function burguerMenu() {
-    navList.style.display = 'block';
-    darkOverlay.style.display = 'block';
-};
-
-burguerMenuIcon.addEventListener('click', () => {
-    burguerMenu();
-    blockScroll();
-});
-
-function hideBurguerMenu() {
-    navList.style.display = 'none';
-    darkOverlay.style.display = 'none';
-};
-
-closeMenuIcon.addEventListener('click', () => {
-    hideBurguerMenu();
-    unlockScroll();
-});
-
-function blockScroll() {
-    document.body.style.overflow = 'hidden';
-};
-
-function unlockScroll() {
-    document.body.style.overflow = '';
-};
-
-// ================================================
 // FIM DO CÓDIGO
 // ================================================
