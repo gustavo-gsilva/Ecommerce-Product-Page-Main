@@ -300,6 +300,8 @@
     body {
         justify-content: flex-start;
         align-items: flex-start;
+        max-width: 585px;
+        margin: 0 auto;
     }
 
     .header {
@@ -468,6 +470,11 @@
 
 @media (max-width: 530px) {
 
+    body {
+        max-width: 530px;
+        margin: 0 auto;
+    }
+
     .header nav {
         justify-content: space-evenly;
     }
@@ -490,6 +497,11 @@
 }
 
 @media (max-width: 470px) {
+
+    body {
+        max-width: 470px;
+        margin: 0 auto;
+    }
 
     .header nav {
         padding-right: 80px;
@@ -528,6 +540,11 @@
 }
 
 @media (max-width: 415px) {
+
+    body {
+        max-width: 415px;
+        margin: 0 auto;
+    }
 
     .header nav {
         padding-right: 110px;
@@ -570,6 +587,11 @@
 }
 
 @media (max-width: 390px) {
+
+    body {
+        max-width: 390px;
+        margin: 0 auto;
+    }
 
     .header nav {
         padding-right: 139px;
