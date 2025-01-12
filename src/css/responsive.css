@@ -495,6 +495,10 @@
         padding-right: 80px;
     }
 
+    .product .product-image img {
+        height: 58vh;
+    }
+
     .main-content .product-information .product-quantity {
         max-width: 90vw;
     }
@@ -572,7 +576,7 @@
     }
 
     .product .product-image img {
-        height: 58vh;
+        height: 55vh;
     }
 
     .main-content .product-information s {
