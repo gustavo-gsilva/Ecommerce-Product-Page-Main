@@ -83,6 +83,12 @@
 
 }
 
+@media (min-width: 816px) {
+    .animate__fadeInLeft {
+        animation: none !important;
+    }
+}
+
 @media (max-width: 815px) {
 
     .header nav {
