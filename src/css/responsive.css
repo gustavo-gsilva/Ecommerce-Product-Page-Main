@@ -469,7 +469,9 @@
 @media (max-width: 530px) {
 
     .header nav {
-        justify-content: space-evenly;
+        max-width: 430px;
+        justify-content: space-between;
+        padding-left: 50px;
     }
 
     .main-content .product-information .product-quantity p {
@@ -492,7 +494,7 @@
 @media (max-width: 470px) {
 
     .header nav {
-        padding-right: 80px;
+        max-width: 400px;
     }
 
     .product .product-image img {
@@ -527,10 +529,19 @@
 
 }
 
+@media (max-width: 440px) {
+
+    .header nav {
+        padding: 0;
+        justify-content: space-evenly;
+    }
+
+}
+
 @media (max-width: 415px) {
 
     .header nav {
-        padding-right: 110px;
+        max-width: 390px;
     }
 
     .product .product-image img {
@@ -572,7 +583,7 @@
 @media (max-width: 390px) {
 
     .header nav {
-        padding-right: 139px;
+        max-width: 370px;
     }
 
     .product .product-image img {
