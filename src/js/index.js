@@ -107,7 +107,7 @@ cart.addEventListener('click', () => {
 // FUNÇÕES DE ADICIONAR PRODUTOS AO CARRINHO
 // ================================================
 
-const btnAddToCart = document.querySelector('.btn-add-to-cart');
+const btnAddToCart = document.querySelector('.div-button');
 const productCounterInCart = document.querySelector('.number-of-products-in-the-cart');
 
 function updateQuantity() {
@@ -173,6 +173,68 @@ function cleanCart() {
 
 bin.addEventListener('click', () => {
     cleanCart();
+});
+
+// ================================================
+// FUNÇÕES DE EXIBIÇÃO DO MENU RESPONSIVO
+// ================================================
+
+const responsiveMenuIcon = document.getElementById('burguer');
+const responsiveMenu = document.querySelector('.navigation-items');
+const responsiveMenuCloseIcon = document.querySelector('.close-menu-icon');
+const overlay = document.getElementById('overlay');
+
+function showMenu() {
+    responsiveMenu.style.display = 'block';
+
+    if (responsiveMenu.style.display === 'block') {
+        overlay.style.display = 'block';
+    }
+};
+
+function closeMenu() {
+    responsiveMenu.style.display = 'none';
+    overlay.style.display = 'none';
+};
+
+responsiveMenuIcon.addEventListener('click', () => {
+    showMenu();
+});
+
+responsiveMenuCloseIcon.addEventListener('click', () => {
+    closeMenu();
+});
+
+// ================================================
+// FUNÇÕES DO CARROSEL DE IMAGENS RESPONSIVO
+// ================================================
+
+document.addEventListener('DOMContentLoaded', () => {
+    const leftArrow = document.querySelector('.left-arrow-responsive');
+    const rightArrow = document.querySelector('.right-arrow-responsive');
+    const mainImage = document.getElementById('main-image');
+
+    const imagesResponsive = [
+        './src/images/image-product-1.jpg',
+        './src/images/image-product-2.jpg',
+        './src/images/image-product-3.jpg',
+        './src/images/image-product-4.jpg'
+    ];
+
+    let currentIndex = 0;
+
+    function updateImage(index) {
+        mainImage.src = imagesResponsive[index];
+    }
+
+    leftArrow.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? imagesResponsive.length - 1 : currentIndex - 1;
+        updateImage(currentIndex);
+    });
+    rightArrow.addEventListener('click', () => {
+        currentIndex = (currentIndex === imagesResponsive.length - 1) ? 0 : currentIndex + 1;
+        updateImage(currentIndex);
+    });
 });
 
 // ================================================

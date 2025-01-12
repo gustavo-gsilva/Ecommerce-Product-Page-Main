@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecommerce Product Page Main</title>
 
     <link rel="stylesheet" href="./src/css/reset.css">
@@ -17,15 +17,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Kumbh+Sans:wght@400..700&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
+    <div class="overlay" id="overlay"></div>
+
     <header class="header">
         <nav>
             <div class="logo-and-nav-itens">
+                <i id="burguer" class="fa-solid fa-bars"></i>
+
                 <a href="#"><img src="./src/images/logo.svg" alt="Logo"></a>
 
-                <div class="navigation-items">
+                <div class="navigation-items  animate__animated animate__fadeInLeft">
+                    <div class="responsive-menu-close-icon">
+                        <img class="close-menu-icon" src="./src/images/icon-close.svg" alt="Icon Close">
+                    </div>
+
                     <ul class="nav-list">
                         <li><a href="#">Collections</a></li>
                         <li><a href="#">Men</a></li>
@@ -55,57 +65,62 @@
     <main class="main-content">
         <div class="product">
             <div class="product-image">
-                <img src="./src/images/image-product-1.jpg" alt="Image Product">
+                <img class="left-arrow-responsive" src="./src/images/icon-previous.svg" alt="Left Arrow">
+                <img id="main-image" src="./src/images/image-product-1.jpg" alt="Image Product 1">
+                <img class="right-arrow-responsive" src="./src/images/icon-next.svg" alt="Right Arrow">
             </div>
 
-            <div class="product-information">
-                <h3>Sneaker Company</h3>
-                <h1>Fall Limited Edition Sneakers</h1>
-
-                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer
-                    sole,
-                    they´ll withstand everything the weather can offer.</p>
-
-                <div class="product-discount">
-                    <h3>$125.00</h3>
-                    <p>50%</p>
+            <div class="thumbnail-image-container">
+                <div class="thumbnail-images" onclick="openModal(0)">
+                    <img src="./src/images/image-product-1-thumbnail.jpg" alt="Image Product 1 Thumbnail">
                 </div>
+                <div class="thumbnail-images" onclick="openModal(1)">
+                    <img src="./src/images/image-product-2-thumbnail.jpg" alt="Image Product 2 Thumbnail">
+                </div>
+                <div class="thumbnail-images" onclick="openModal(2)">
+                    <img src="./src/images/image-product-3-thumbnail.jpg" alt="Image Product 3 Thumbnail">
+                </div>
+                <div class="thumbnail-images" onclick="openModal(3)">
+                    <img src="./src/images/image-product-4-thumbnail.jpg" alt="Image Product 4 Thumbnail">
+                </div>
+            </div>
+        </div>
 
-                <s>$250.00</s>
+        <div class="product-information">
+            <h3>Sneaker Company</h3>
+            <h1>Fall Limited Edition Sneakers</h1>
 
-                <div class="add-product">
-                    <div class="product-quantity">
-                        <div class="minus-icon">
-                            <img id="btn-less" src="./src/images/icon-minus.svg" alt="Icon Minus">
-                        </div>
+            <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer
+                sole,
+                they´ll withstand everything the weather can offer.</p>
 
-                        <p id="counter">0</p>
+            <div class="product-discount">
+                <h3>$125.00</h3>
+                <p>50%</p>
+            </div>
 
-                        <div class="plus-icon">
-                            <img id="btn-more" src="./src/images/icon-plus.svg" alt="Icon Plus">
-                        </div>
+            <s>$250.00</s>
+
+            <div class="add-product">
+                <div class="product-quantity">
+                    <div class="minus-icon">
+                        <img id="btn-less" src="./src/images/icon-minus.svg" alt="Icon Minus">
                     </div>
 
+                    <p id="counter">0</p>
+
+                    <div class="plus-icon">
+                        <img id="btn-more" src="./src/images/icon-plus.svg" alt="Icon Plus">
+                    </div>
+                </div>
+
+                <div class="div-button">
                     <button class="btn-add-to-cart"><img src="./src/images/icon-cart.svg" alt="Icon Cart">Add to
                         cart</button>
                 </div>
             </div>
         </div>
 
-        <div class="thumbnail-image-container">
-            <div class="thumbnail-images" onclick="openModal(0)">
-                <img src="./src/images/image-product-1-thumbnail.jpg" alt="Image Product 1 Thumbnail">
-            </div>
-            <div class="thumbnail-images" onclick="openModal(1)">
-                <img src="./src/images/image-product-2-thumbnail.jpg" alt="Image Product 2 Thumbnail">
-            </div>
-            <div class="thumbnail-images" onclick="openModal(2)">
-                <img src="./src/images/image-product-3-thumbnail.jpg" alt="Image Product 3 Thumbnail">
-            </div>
-            <div class="thumbnail-images" onclick="openModal(3)">
-                <img src="./src/images/image-product-4-thumbnail.jpg" alt="Image Product 4 Thumbnail">
-            </div>
-        </div>
     </main>
 
     <div class="hidden-images">
@@ -120,11 +135,11 @@
         </div>
 
         <div class="left-arrow" onclick="changeImage(-1)">
-            <img src="./src/images/icon-previous.svg" alt="">
+            <img src="./src/images/icon-previous.svg" alt="Left Arrow">
         </div>
 
         <div class="right-arrow" onclick="changeImage(1)">
-            <img src="./src/images/icon-next.svg" alt="">
+            <img src="./src/images/icon-next.svg" alt="Right Arrow">
         </div>
 
         <div class="thumbnail-image-container">
