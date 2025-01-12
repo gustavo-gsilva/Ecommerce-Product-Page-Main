@@ -160,18 +160,18 @@ body {
     color: var(--dark-gray-blue);
 }
 
-.main-content .product-information .product-discount {
+.main-content .product-information .price-without-promotion .product-discount {
     display: flex;
     gap: 10px;
-    padding-top: 20px;
+    padding: 20px 0 7px 0;
 }
 
-.main-content .product-information .product-discount h3 {
+.main-content .product-information .price-without-promotion .product-discount h3 {
     font-size: 2.4rem;
     color: var(--black);
 }
 
-.main-content .product-information .product-discount p {
+.main-content .product-information .price-without-promotion .product-discount p {
     background-color: var(--black);
     color: var(--light-gray-blue);
     font-size: 1.4rem;
@@ -181,10 +181,9 @@ body {
     border-radius: 7px;
 }
 
-.main-content .product-information s {
+.main-content .product-information .price-without-promotion s {
     font-size: 1.6rem;
     font-weight: 700;
-    padding-top: 12px;
     color: var(--dark-gray-blue);
 }
 

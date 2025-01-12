@@ -173,15 +173,15 @@
         padding: 0;
     }
 
-    .main-content .product-information .product-discount {
+    .main-content .product-information .price-without-promotion .product-discount {
         padding-top: 13px;
     }
 
-    .main-content .product-information .product-discount h3 {
+    .main-content .product-information .price-without-promotion .product-discount h3 {
         font-size: 2rem;
     }
 
-    .main-content .product-information .product-discount p {
+    .main-content .product-information .price-without-promotion .product-discount p {
         font-size: 1.2rem;
         margin-top: 0;
     }
@@ -357,11 +357,11 @@
     }
 
     .main-content .product .product-image .left-arrow-responsive {
-        left: 6%;
+        left: 10%;
     }
 
     .main-content .product .product-image .right-arrow-responsive {
-        left: 86%;
+        left: 80%;
     }
 
     .product .product-image img {
@@ -395,23 +395,24 @@
         padding-right: 20px;
     }
 
-    .main-content .product-information .product-discount h3 {
+    .main-content .product-information .price-without-promotion {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-content .product-information .price-without-promotion .product-discount h3 {
         font-size: 2.8rem;
     }
 
-    .main-content .product-information .product-discount p {
+    .main-content .product-information .price-without-promotion .product-discount p {
         font-size: 1.5rem;
         margin-top: 5px;
     }
 
-    .main-content .product-information s {
+    .main-content .product-information .price-without-promotion s {
         max-height: 30px;
-        position: absolute;
-        bottom: 0;
-        top: 45%;
-        left: 82%;
         font-size: 1.8rem;
-        padding-top: 7px;
+        padding: 24px 25px 0 0;
     }
 
     .main-content .product-information .add-product {
@@ -513,11 +514,11 @@
     }
 
     .main-content .product .product-image .left-arrow-responsive {
-        left: 8%;
+        left: 13%;
     }
 
     .main-content .product .product-image .right-arrow-responsive {
-        left: 82%;
+        left: 77%;
     }
 
 }
@@ -577,6 +578,10 @@
     .main-content .product-information s {
         top: 49%;
         left: 75%;
+    }
+
+    .main-content .product-information .product-quantity p {
+        padding: 0 130px;
     }
 
     .empty-cart .empty-cart-container,
